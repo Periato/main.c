@@ -33,14 +33,6 @@ void fibonacci() {
     }
     printf("\n");
 }
-// Função para calcular fatorial
-int fatorial(int n) {
-    int fat = 1;
-    for (int i = 2; i <= n; i++) {
-        fat *= i;
-    }
-    return fat;
-}
 
 // Função para mostrar os fatoriais de 1 a N
 void mostrar_fatoriais() {

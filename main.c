@@ -34,30 +34,7 @@ void fibonacci() {
     printf("\n");
 }
 
-// Função para calcular fatorial
-int fatorial(int n) {
-    int fat = 1;
-    for (int i = 2; i <= n; i++) {
-        fat *= i;
-    }
-    return fat;
-}
 
-// Função para mostrar os fatoriais de 1 a N
-void mostrar_fatoriais() {
-    int N;
-    do {
-        printf("Digite um numero inteiro entre 1 e 20: ");
-        scanf("%d", &N);
-        if (N < 1 || N > 20) {
-            printf("Entrada inválida. Tente novamente.\n");
-        }
-    } while (N < 1 || N > 20);
-
-    for (int i = 1; i <= N; i++) {
-        printf("%d! = %d\n", i, fatorial(i));
-    }
-}
 void verificar_palindromo() {
     char palavra[101];
     int i, tamanho, palindromo = 1;
@@ -100,43 +77,3 @@ void verificarSubstring() {
         printf("A segunda string Nao esta contida na primeira.\n");
 }
 
-// Menu de opções
-void menu() {
-    char opcao;
-    do {
-        printf("\n===== MENU DE EXERCICIOS =====\n");
-        printf("1 - Sequencia de Fibonacci\n");
-        printf("2 - Fatoriais\n");
-        printf("3 - Verificar Palindromo\n");
-        printf("4 - Verificar Substring\n");
-        printf("0 - Sair\n");
-        printf("Escolha uma opcao: ");
-        scanf(" %c", &opcao);
-
-        switch (opcao) {
-            case '1':
-                fibonacci();
-                break;
-            case '2':
-                mostrar_fatoriais();
-                break;
-            case '3':
-                verificar_palindromo();
-                break;
-            case '4':
-                verificarSubstring();
-                break;
-            case '0':
-                printf("Encerrando o programa.\n");
-                break;
-            default:
-                printf("Opção invalida.\n");
-        }
-    } while (opcao != '0');
-}
-
-// Função principal
-int main() {
-    menu(); // Chama o menu
-    return 0;
-}
